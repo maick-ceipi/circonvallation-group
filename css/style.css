@@ -1203,7 +1203,7 @@ body.cursor-hover .cursor-ring {
   aspect-ratio: 400 / 260;
   overflow: hidden;
   border-bottom: 1px solid var(--silk);
-  background: linear-gradient(135deg, var(--midnight), var(--navy));
+  background: var(--white);
 }
 
 .cat-card-img::after {
@@ -1219,7 +1219,8 @@ body.cursor-hover .cursor-ring {
 
 .cat-card-img img {
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 16px;
   transition: transform 0.7s var(--ease-out-expo);
 }
 
