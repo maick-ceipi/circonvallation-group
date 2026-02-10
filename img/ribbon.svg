@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="ribBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#131520"/>
+      <stop offset="100%" stop-color="#090B10"/>
+    </linearGradient>
+    <linearGradient id="ymck1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8D44D" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E8D44D" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="ymck2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D43E7D" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D43E7D" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="ymck3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2EA6D4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2EA6D4" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="ymck4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A2F3C" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#111318" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#ribBg)"/>
+  <!-- Ribbon spool left -->
+  <g transform="translate(85, 130)">
+    <circle cx="0" cy="0" r="55" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <!-- YMCK color bands -->
+    <path d="M-45 0 A45 45 0 0 1 -32 -32" stroke="url(#ymck1)" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M-32 -32 A45 45 0 0 1 0 -45" stroke="url(#ymck2)" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M0 -45 A45 45 0 0 1 32 -32" stroke="url(#ymck3)" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M32 -32 A45 45 0 0 1 45 0" stroke="url(#ymck4)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- Ribbon spool right -->
+  <g transform="translate(315, 130)">
+    <circle cx="0" cy="0" r="55" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+  <!-- Ribbon connecting -->
+  <path d="M140 110 Q200 85 270 110" stroke="rgba(196,154,60,0.15)" stroke-width="2" fill="none"/>
+  <path d="M140 150 Q200 175 270 150" stroke="rgba(196,154,60,0.1)" stroke-width="2" fill="none"/>
+  <!-- YMCK label -->
+  <g transform="translate(170, 220)">
+    <rect x="0" y="0" width="12" height="12" rx="2" fill="#E8D44D" opacity="0.5"/>
+    <rect x="16" y="0" width="12" height="12" rx="2" fill="#D43E7D" opacity="0.5"/>
+    <rect x="32" y="0" width="12" height="12" rx="2" fill="#2EA6D4" opacity="0.5"/>
+    <rect x="48" y="0" width="12" height="12" rx="2" fill="#2A2F3C" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+  </g>
+  <text x="200" y="248" text-anchor="middle" font-family="system-ui" font-size="9" letter-spacing="3" font-weight="400" fill="rgba(255,255,255,0.2)">YMCK</text>
+</svg>

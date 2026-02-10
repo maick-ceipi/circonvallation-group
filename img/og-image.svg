@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0C10"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E2C87A"/>
+      <stop offset="100%" stop-color="#C49A3C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="50%">
+      <stop offset="0%" stop-color="#C49A3C" stop-opacity="0.08"/>
+      <stop offset="60%" stop-color="#C49A3C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- Grid lines -->
+  <line x1="240" y1="0" x2="240" y2="630" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  <line x1="480" y1="0" x2="480" y2="630" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  <line x1="720" y1="0" x2="720" y2="630" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  <line x1="960" y1="0" x2="960" y2="630" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  <!-- Logo mark -->
+  <rect x="80" y="200" width="72" height="72" rx="16" fill="#181B22" stroke="#C49A3C" stroke-opacity="0.2" stroke-width="1.5"/>
+  <text x="116" y="246" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="url(#goldG)">CG</text>
+  <!-- Title -->
+  <text x="80" y="330" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#F8F9FB">Circonvallation</text>
+  <text x="80" y="388" font-family="Georgia, serif" font-size="48" font-weight="400" font-style="italic" fill="#D4AE56">Group</text>
+  <!-- Subtitle -->
+  <text x="80" y="440" font-family="system-ui, sans-serif" font-size="20" font-weight="300" fill="#8B92A3">Pilotage stratégique de solutions sécurisées &amp; informatiques</text>
+  <!-- Card illustration -->
+  <g transform="translate(750, 140)">
+    <rect width="340" height="215" rx="16" fill="#1A1D26" stroke="#C49A3C" stroke-opacity="0.15" stroke-width="1.5" transform="rotate(-6)"/>
+    <rect width="340" height="215" rx="16" fill="#12141B" stroke="rgba(255,255,255,0.08)" stroke-width="1" transform="translate(30, 50) rotate(3)"/>
+    <rect width="340" height="215" rx="16" fill="#16181F" stroke="rgba(255,255,255,0.06)" stroke-width="1" transform="translate(15, 100) rotate(-1)"/>
+    <!-- Chip on front card -->
+    <rect x="28" y="60" width="46" height="35" rx="5" fill="url(#goldG)" opacity="0.7" transform="rotate(-6)"/>
+  </g>
+  <!-- Bottom line -->
+  <rect x="80" y="530" width="200" height="1" rx="0.5" fill="#C49A3C" opacity="0.3"/>
+  <text x="80" y="560" font-family="system-ui, sans-serif" font-size="13" font-weight="400" letter-spacing="3" fill="#5A6274">FRANCE · EUROPE · AFRIQUE</text>
+</svg>

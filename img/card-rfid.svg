@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <linearGradient id="rfidBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141720"/>
+      <stop offset="100%" stop-color="#0A0C12"/>
+    </linearGradient>
+    <radialGradient id="rfidGlow" cx="65%" cy="45%">
+      <stop offset="0%" stop-color="#3B6DB5" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#3B6DB5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Card body -->
+  <rect x="20" y="20" width="360" height="220" rx="16" fill="url(#rfidBg)" stroke="rgba(59,109,181,0.15)" stroke-width="1"/>
+  <rect x="20" y="20" width="360" height="220" rx="16" fill="url(#rfidGlow)"/>
+  <!-- RFID waves -->
+  <g transform="translate(260, 110)" stroke="#3B6DB5" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="0" r="20" stroke-opacity="0.3" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="35" stroke-opacity="0.2" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="50" stroke-opacity="0.12" stroke-width="1"/>
+    <circle cx="0" cy="0" r="65" stroke-opacity="0.06" stroke-width="0.8"/>
+    <circle cx="0" cy="0" r="8" fill="#3B6DB5" fill-opacity="0.25" stroke="none"/>
+    <circle cx="0" cy="0" r="3" fill="#6B9AD4" stroke="none"/>
+  </g>
+  <!-- NFC label -->
+  <rect x="300" y="40" width="52" height="22" rx="4" fill="none" stroke="rgba(59,109,181,0.25)" stroke-width="1"/>
+  <text x="326" y="55" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="600" letter-spacing="2" fill="rgba(107,154,212,0.5)">NFC</text>
+  <!-- Chip area -->
+  <rect x="52" y="75" width="46" height="36" rx="5" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="3 2"/>
+  <!-- Data lines -->
+  <rect x="52" y="140" width="140" height="7" rx="3.5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="52" y="157" width="95" height="5" rx="2.5" fill="rgba(255,255,255,0.04)"/>
+  <!-- Frequency label -->
+  <text x="52" y="200" font-family="system-ui" font-size="10" font-weight="300" letter-spacing="1.5" fill="rgba(107,154,212,0.3)">13.56 MHz</text>
+  <!-- Bottom ID -->
+  <rect x="52" y="210" width="200" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+</svg>

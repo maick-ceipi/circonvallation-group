@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circonvallation Group — Solutions Sécurisées & IT</title>
+  <meta name="description" content="Pilotage stratégique de solutions sécurisées et informatiques. Cartes sécurisées, consommables, prestations IT — France, Europe, Afrique.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Circonvallation Group — Solutions Sécurisées & IT">
+  <meta property="og:description" content="Pilotage stratégique de solutions sécurisées et informatiques. Cartes, consommables, prestations IT.">
+  <meta property="og:image" content="img/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NOISE GRAIN OVERLAY -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <span class="loader-logo">CG</span>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" data-magnetic>
+        <img src="img/Circonvallation LOGO 3.jpg.jpeg" alt="Circonvallation Group" class="logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#accueil" data-nav>Accueil</a></li>
+        <li><a href="#solutions" data-nav>Solutions</a></li>
+        <li><a href="#expertise" data-nav>Expertise</a></li>
+        <li><a href="#catalogue" data-nav>Catalogue</a></li>
+        <li><a href="#partenaires" data-nav>Partenaires</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#contact" class="nav-cta" data-magnetic>
+          <span>Nous contacter</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg">
+      <img src="img/hero-pattern.svg" alt="" class="hero-bg-img" aria-hidden="true" loading="eager">
+      <div class="hero-orb orb-gold" aria-hidden="true"></div>
+      <div class="hero-orb orb-blue" aria-hidden="true"></div>
+      <div class="hero-orb orb-teal" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-mesh"></div>
+      <div class="hero-radial"></div>
+      <div class="hero-lines" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow" data-reveal>
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Solutions sécurisées & informatiques</span>
+        </div>
+        <h1 data-reveal data-reveal-delay="1">
+          <span class="h1-line"><span class="h1-word">Pilotage</span></span>
+          <span class="h1-line"><span class="h1-word italic">stratégique</span> <span class="h1-word">de</span></span>
+          <span class="h1-line"><span class="h1-word gold">solutions</span></span>
+          <span class="h1-line"><span class="h1-word gold">sécurisées</span></span>
+        </h1>
+        <p class="hero-desc" data-reveal data-reveal-delay="2">
+          De la carte sécurisée à l'ingénierie logicielle — conception, pilotage et déploiement de solutions d'identification et IT pour entreprises, administrations et institutions.
+        </p>
+        <div class="hero-actions" data-reveal data-reveal-delay="3">
+          <a href="#solutions" class="btn btn-gold" data-magnetic>
+            <span>Découvrir nos solutions</span>
+            <span class="btn-shimmer"></span>
+          </a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic>
+            <span>Demander un devis</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-card-3d" data-reveal data-reveal-delay="2">
+        <div class="card-scene" id="cardScene">
+          <div class="card-3d" id="card3d">
+            <div class="card-face card-front">
+              <div class="cfront-header">
+                <span class="cfront-logo">CG</span>
+                <span class="cfront-type">SECURE ID</span>
+              </div>
+              <div class="cfront-chip">
+                <div class="chip-body">
+                  <div class="chip-line"></div>
+                  <div class="chip-line"></div>
+                  <div class="chip-line"></div>
+                </div>
+              </div>
+              <div class="cfront-nfc">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M8.5 16.5a5 5 0 017-7" stroke="currentColor" stroke-width="1.2"/><path d="M5 20a10 10 0 0114-14" stroke="currentColor" stroke-width="1.2"/><path d="M12 13a1 1 0 100-2 1 1 0 000 2z" fill="currentColor"/></svg>
+              </div>
+              <div class="cfront-data">
+                <div class="cfront-name">CIRCONVALLATION GROUP</div>
+                <div class="cfront-num">•••• •••• •••• 2026</div>
+              </div>
+              <div class="cfront-holo"></div>
+              <div class="cfront-shine"></div>
+            </div>
+            <div class="card-face card-back">
+              <div class="cback-stripe"></div>
+              <div class="cback-sig">
+                <span>AUTHORIZED SIGNATURE</span>
+                <div class="cback-sig-area"></div>
+              </div>
+              <div class="cback-barcode"></div>
+              <div class="cback-info">
+                <span>Circonvallation Group SAS</span>
+                <span>France • Europe • Afrique</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-reflection"></div>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <div class="container hero-bottom-inner">
+        <div class="hero-stats">
+          <div class="stat" data-reveal data-reveal-delay="4">
+            <span class="stat-value">3</span>
+            <span class="stat-label">Pôles d'expertise</span>
+          </div>
+          <div class="stat" data-reveal data-reveal-delay="4.5">
+            <span class="stat-value">B2B&thinsp;/&thinsp;B2G</span>
+            <span class="stat-label">Marchés ciblés</span>
+          </div>
+          <div class="stat" data-reveal data-reveal-delay="5">
+            <span class="stat-value">3</span>
+            <span class="stat-label">Continents</span>
+          </div>
+        </div>
+        <div class="scroll-cue" data-reveal data-reveal-delay="5">
+          <span>Scroll</span>
+          <div class="scroll-track"><div class="scroll-thumb"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Cartes Sécurisées</span><span class="marquee-dot"></span>
+      <span>RFID & NFC</span><span class="marquee-dot"></span>
+      <span>Hologrammes</span><span class="marquee-dot"></span>
+      <span>Consommables</span><span class="marquee-dot"></span>
+      <span>Ingénierie Logicielle</span><span class="marquee-dot"></span>
+      <span>Déploiement IT</span><span class="marquee-dot"></span>
+      <span>Anti-Fraude</span><span class="marquee-dot"></span>
+      <span>B2B & B2G</span><span class="marquee-dot"></span>
+      <span>Cartes Sécurisées</span><span class="marquee-dot"></span>
+      <span>RFID & NFC</span><span class="marquee-dot"></span>
+      <span>Hologrammes</span><span class="marquee-dot"></span>
+      <span>Consommables</span><span class="marquee-dot"></span>
+      <span>Ingénierie Logicielle</span><span class="marquee-dot"></span>
+      <span>Déploiement IT</span><span class="marquee-dot"></span>
+      <span>Anti-Fraude</span><span class="marquee-dot"></span>
+      <span>B2B & B2G</span><span class="marquee-dot"></span>
+    </div>
+  </div>
+
+  <!-- SOLUTIONS -->
+  <section class="solutions" id="solutions">
+    <div class="container">
+      <div class="section-intro" data-reveal>
+        <span class="section-index">01</span>
+        <h2 class="section-title">Nos <em>Solutions</em></h2>
+        <p class="section-subtitle">Trois pôles d'excellence au service de votre sécurité et de votre transformation numérique.</p>
+      </div>
+
+      <div class="sol-cards">
+        <!-- Card 1 -->
+        <article class="sol-card" data-reveal>
+          <div class="sol-card-bg"></div>
+          <div class="sol-card-inner">
+            <div class="sol-card-head">
+              <span class="sol-card-num">01</span>
+              <div class="sol-card-icon">
+                <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="16" width="10" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><line x1="9" y1="30" x2="39" y2="30" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><rect x="31" y="15" width="8" height="6" rx="1" stroke="currentColor" stroke-width="1" stroke-dasharray="2 1.5"/></svg>
+              </div>
+            </div>
+            <h3>Cartes Sécurisées</h3>
+            <p class="sol-card-desc">Conception, production et distribution de cartes d'identification haute sécurité pour les secteurs public et privé.</p>
+            <ul class="sol-card-list">
+              <li>Cartes PVC — identification, badges, cartes pro</li>
+              <li>Technologies RFID, NFC et cartes à puce</li>
+              <li>Hologrammes, encres sécurisées, anti-fraude</li>
+              <li>Pilotage fournisseurs & partenaires techniques</li>
+            </ul>
+            <div class="sol-card-tags">
+              <span>PVC</span><span>RFID</span><span>NFC</span><span>Hologramme</span>
+            </div>
+          </div>
+          <div class="sol-card-glow"></div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="sol-card" data-reveal>
+          <div class="sol-card-bg"></div>
+          <div class="sol-card-inner">
+            <div class="sol-card-head">
+              <span class="sol-card-num">02</span>
+              <div class="sol-card-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <!-- Bobine gauche -->
+                  <circle cx="14" cy="24" r="10" stroke="currentColor" stroke-width="1.4"/>
+                  <circle cx="14" cy="24" r="4" stroke="currentColor" stroke-width="1"/>
+                  <!-- Bobine droite -->
+                  <circle cx="34" cy="24" r="10" stroke="currentColor" stroke-width="1.4"/>
+                  <circle cx="34" cy="24" r="4" stroke="currentColor" stroke-width="1"/>
+                  <!-- Ruban haut -->
+                  <path d="M18 16 Q24 12 30 16" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                  <!-- Ruban bas -->
+                  <path d="M18 32 Q24 36 30 32" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                  <!-- Couleurs YMCK -->
+                  <rect x="8" y="40" width="6" height="4" rx="1" fill="currentColor" opacity="0.6"/>
+                  <rect x="16" y="40" width="6" height="4" rx="1" fill="currentColor" opacity="0.4"/>
+                  <rect x="24" y="40" width="6" height="4" rx="1" fill="currentColor" opacity="0.25"/>
+                  <rect x="32" y="40" width="6" height="4" rx="1" fill="currentColor" opacity="0.15"/>
+                </svg>
+              </div>
+            </div>
+            <h3>Consommables Informatiques</h3>
+            <p class="sol-card-desc">Fourniture complète de consommables et accessoires pour l'impression et la personnalisation de cartes.</p>
+            <ul class="sol-card-list">
+              <li>Rubans YMCK, résine, hologrammes</li>
+              <li>Cartes vierges PVC, RFID et NFC</li>
+              <li>Accessoires pour imprimantes professionnelles</li>
+              <li>Distribution B2B & B2G internationale</li>
+            </ul>
+            <div class="sol-card-tags">
+              <span>Rubans</span><span>PVC</span><span>Imprimantes</span><span>B2B</span>
+            </div>
+          </div>
+          <div class="sol-card-glow"></div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="sol-card" data-reveal>
+          <div class="sol-card-bg"></div>
+          <div class="sol-card-inner">
+            <div class="sol-card-head">
+              <span class="sol-card-num">03</span>
+              <div class="sol-card-icon">
+                <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="32" x2="32" y2="32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="36" x2="28" y2="36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="16,22 22,17 16,12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="26" y1="23" x2="34" y2="23" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <h3>Prestations IT</h3>
+            <p class="sol-card-desc">Ingénierie logicielle, déploiement et accompagnement de projets numériques pour des clients exigeants.</p>
+            <ul class="sol-card-list">
+              <li>Développement de solutions numériques</li>
+              <li>Déploiement d'infrastructures IT</li>
+              <li>Support technique & maintenance</li>
+              <li>Coordination d'équipes onshore/offshore</li>
+            </ul>
+            <div class="sol-card-tags">
+              <span>Dev</span><span>Cloud</span><span>Support</span><span>Offshore</span>
+            </div>
+          </div>
+          <div class="sol-card-glow"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="expertise" id="expertise">
+    <div class="expertise-diagonal"></div>
+    <div class="container">
+      <div class="section-intro light" data-reveal>
+        <span class="section-index">02</span>
+        <h2 class="section-title">Notre <em>Expertise</em></h2>
+        <p class="section-subtitle">Une organisation bi-polaire structurée pour couvrir l'intégralité de la chaîne de valeur.</p>
+      </div>
+
+      <div class="poles-row">
+        <div class="pole" data-reveal>
+          <div class="pole-number">I</div>
+          <div class="pole-content">
+            <h3>Pôle IT & Services</h3>
+            <p>Prestations informatiques, déploiement IT, pilotage des équipes techniques. Solutions numériques adaptées aux environnements les plus exigeants.</p>
+            <div class="pole-capabilities">
+              <span>Développement</span>
+              <span>Déploiement</span>
+              <span>Support</span>
+              <span>Coordination</span>
+            </div>
+          </div>
+          <div class="pole-line"></div>
+        </div>
+        <div class="pole" data-reveal>
+          <div class="pole-number">II</div>
+          <div class="pole-content">
+            <h3>Pôle Trade & Supply</h3>
+            <p>Cartes sécurisées, consommables, logistique, négociation fournisseurs et équipements. Pilotage de la chaîne d'approvisionnement de bout en bout.</p>
+            <div class="pole-capabilities">
+              <span>Cartes</span>
+              <span>Consommables</span>
+              <span>Logistique</span>
+              <span>Fournisseurs</span>
+            </div>
+          </div>
+          <div class="pole-line"></div>
+        </div>
+      </div>
+
+      <div class="geo-banner" data-reveal>
+        <div class="geo-banner-inner">
+          <h4>Portée internationale</h4>
+          <div class="geo-locations">
+            <div class="geo-loc">
+              <div class="geo-ping"></div>
+              <strong>France & Europe</strong>
+              <span>Siège & marché principal</span>
+            </div>
+            <div class="geo-separator"></div>
+            <div class="geo-loc">
+              <div class="geo-ping"></div>
+              <strong>Afrique Centrale & Ouest</strong>
+              <span>Zone prioritaire</span>
+            </div>
+            <div class="geo-separator"></div>
+            <div class="geo-loc">
+              <div class="geo-ping"></div>
+              <strong>Transfrontalier</strong>
+              <span>Intervention multi-pays</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGUE -->
+  <section class="catalogue" id="catalogue">
+    <div class="container">
+      <div class="section-intro" data-reveal>
+        <span class="section-index">03</span>
+        <h2 class="section-title">Notre <em>Catalogue</em></h2>
+        <p class="section-subtitle">Un éventail complet de solutions d'identification et de consommables professionnels.</p>
+      </div>
+      <div class="cat-showcase">
+        <a href="#" class="cat-card-v2" data-reveal>
+          <div class="cat-card-img">
+            <img src="img/card-pvc.svg" alt="Cartes PVC vierges" loading="lazy">
+          </div>
+          <div class="cat-card-body">
+            <h4>Cartes PVC vierges</h4>
+            <span>Blanches, couleur, avec ou sans piste magnétique</span>
+            <div class="cat-card-arrow">→</div>
+          </div>
+        </a>
+        <a href="#" class="cat-card-v2" data-reveal>
+          <div class="cat-card-img">
+            <img src="img/card-rfid.svg" alt="Cartes RFID et NFC" loading="lazy">
+          </div>
+          <div class="cat-card-body">
+            <h4>Cartes RFID & NFC</h4>
+            <span>Mifare, DESFire, NTAG, HID — toutes fréquences</span>
+            <div class="cat-card-arrow">→</div>
+          </div>
+        </a>
+        <a href="#" class="cat-card-v2" data-reveal>
+          <div class="cat-card-img">
+            <img src="img/card-chip.svg" alt="Cartes à puce contact" loading="lazy">
+          </div>
+          <div class="cat-card-body">
+            <h4>Cartes à puce contact</h4>
+            <span>SLE, Java Card, cartes mémoire et microprocesseur</span>
+            <div class="cat-card-arrow">→</div>
+          </div>
+        </a>
+        <a href="#" class="cat-card-v2" data-reveal>
+          <div class="cat-card-img">
+            <img src="img/ribbon.svg" alt="Rubans d'impression" loading="lazy">
+          </div>
+          <div class="cat-card-body">
+            <h4>Rubans d'impression</h4>
+            <span>YMCK, résine monochrome, hologrammes, laminés</span>
+            <div class="cat-card-arrow">→</div>
+          </div>
+        </a>
+        <a href="#" class="cat-card-v2" data-reveal>
+          <div class="cat-card-img">
+            <img src="img/printer.svg" alt="Imprimantes de cartes" loading="lazy">
+          </div>
+          <div class="cat-card-body">
+            <h4>Imprimantes de cartes</h4>
+            <span>Simple et double face, encodage, retransfert</span>
+            <div class="cat-card-arrow">→</div>
+          </div>
+        </a>
+        <a href="#" class="cat-card-v2" data-reveal>
+          <div class="cat-card-img">
+            <img src="img/accessories.svg" alt="Accessoires et logiciels" loading="lazy">
+          </div>
+          <div class="cat-card-body">
+            <h4>Accessoires & logiciels</h4>
+            <span>Kits de nettoyage, lecteurs, logiciels de design</span>
+            <div class="cat-card-arrow">→</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTENAIRE -->
+  <section class="partenaire" id="partenaires">
+    <div class="container">
+      <div class="section-intro" data-reveal>
+        <span class="section-index">04</span>
+        <h2 class="section-title">Notre <em>Partenaire</em></h2>
+      </div>
+      <div class="partner-block" data-reveal>
+        <div class="partner-glass">
+          <div class="partner-left">
+            <div class="partner-logo-wrap">
+              <span class="partner-logo">CardShop</span>
+              <span class="partner-tld">.de</span>
+            </div>
+            <span class="partner-badge">Partenaire stratégique</span>
+          </div>
+          <div class="partner-divider"></div>
+          <div class="partner-right">
+            <p><strong>CardPlus System GmbH</strong> — Plateforme européenne de référence pour la distribution de solutions d'identification, imprimantes de cartes, consommables et services associés.</p>
+            <div class="partner-features">
+              <span>Imprimantes</span>
+              <span>Cartes PVC</span>
+              <span>Rubans</span>
+              <span>RFID</span>
+              <span>Support</span>
+              <span>Expédition internationale</span>
+            </div>
+            <a href="https://www.cardshop.de" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" data-magnetic>
+              <span>Visiter cardshop.de</span>
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg-wrap">
+      <div class="cta-mesh"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content" data-reveal>
+        <h2>Prêt à <em>sécuriser</em><br>vos projets ?</h2>
+        <p>Contactez notre équipe pour discuter de vos besoins en cartes sécurisées, consommables ou prestations informatiques.</p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-gold btn-lg" data-magnetic>
+            <span>Prendre contact</span>
+            <span class="btn-shimmer"></span>
+          </a>
+          <a href="https://www.cardshop.de" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" data-magnetic>
+            <span>Explorer le catalogue</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left" data-reveal>
+          <span class="section-index">05</span>
+          <h2 class="section-title">Parlons de<br><em>votre projet</em></h2>
+          <p>Notre équipe est à votre disposition pour étudier vos besoins et concevoir des solutions sur mesure.</p>
+          <div class="contact-info-list">
+            <div class="ci-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M2 6l8 5 8-5M4 15h12a1.5 1.5 0 001.5-1.5v-8A1.5 1.5 0 0016 4H4a1.5 1.5 0 00-1.5 1.5v8A1.5 1.5 0 004 15z" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:contact@circonvallation-group.com">contact@circonvallation-group.com</a>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M18 14.22v2.23a1.5 1.5 0 01-1.64 1.5A14.86 14.86 0 012.05 3.64 1.5 1.5 0 013.55 2h2.23a1.5 1.5 0 011.5 1.29c.1.72.27 1.43.53 2.11a1.5 1.5 0 01-.34 1.58l-.94.94a12 12 0 005.5 5.5l.94-.94a1.5 1.5 0 011.58-.34c.68.26 1.39.43 2.11.53A1.5 1.5 0 0118 14.22z" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div>
+                <strong>Téléphone</strong>
+                <a href="tel:+33100000000">+33 1 00 00 00 00</a>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C7.24 2 5 4.24 5 7c0 3.94 5 9.75 5 9.75S15 10.94 15 7c0-2.76-2.24-5-5-5z" stroke="currentColor" stroke-width="1.2"/><circle cx="10" cy="7" r="1.8" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div>
+                <strong>Localisation</strong>
+                <span>France — Europe — Afrique</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" data-reveal>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nom">Nom complet</label>
+              <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+            </div>
+            <div class="form-field">
+              <label for="entreprise">Entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" placeholder="Votre entreprise">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="votre@email.com">
+            </div>
+            <div class="form-field">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="+33 ...">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option value="">Sélectionnez un sujet</option>
+              <option value="cartes">Cartes sécurisées</option>
+              <option value="consommables">Consommables informatiques</option>
+              <option value="it">Prestations informatiques</option>
+              <option value="partenariat">Partenariat</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet ou votre besoin..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full" data-magnetic>
+            <span>Envoyer le message</span>
+            <span class="btn-shimmer"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="img/Circonvallation LOGO 3.jpg.jpeg" alt="Circonvallation Group" class="logo-img">
+          </a>
+          <p>Pilotage stratégique de solutions sécurisées et informatiques pour les marchés B2B et B2G.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <a href="#cartes">Cartes sécurisées</a>
+            <a href="#consommables">Consommables</a>
+            <a href="#it">Prestations IT</a>
+            <a href="#catalogue">Catalogue</a>
+          </div>
+          <div class="footer-col">
+            <h4>Entreprise</h4>
+            <a href="#expertise">Expertise</a>
+            <a href="#partenaires">Partenaires</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Mentions légales</a>
+          </div>
+          <div class="footer-col">
+            <h4>Ressources</h4>
+            <a href="https://www.cardshop.de" target="_blank" rel="noopener">CardShop.de ↗</a>
+            <a href="#">Documentation</a>
+            <a href="#">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Circonvallation Group. Tous droits réservés.</span>
+        <div class="footer-legal">
+          <a href="#">Confidentialité</a>
+          <a href="#">CGU</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
