@@ -931,38 +931,26 @@ body.cursor-hover .cursor-ring {
 
 .sol-card-img {
   position: relative;
-  aspect-ratio: 16 / 10;
+  height: 180px;
   overflow: hidden;
   border-radius: 18px 18px 0 0;
-  background: var(--white);
+  background: linear-gradient(135deg, #f8f6fc 0%, #eee9f7 100%);
   z-index: 2;
-}
-
-.sol-card-img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(10, 8, 28, 0.06) 100%);
-  pointer-events: none;
-  transition: opacity 0.5s;
-}
-
-.sol-card:hover .sol-card-img::after {
-  background: linear-gradient(180deg, transparent 30%, rgba(10, 8, 28, 0.12) 100%);
+  border-bottom: 1px solid var(--silk);
 }
 
 .sol-card-img img {
   width: 100%; height: 100%;
-  object-fit: contain;
-  padding: 20px;
+  object-fit: cover;
+  display: block;
   transition: transform 0.7s var(--ease-out-expo);
 }
 
-.sol-card:hover .sol-card-img img { transform: scale(1.06); }
+.sol-card:hover .sol-card-img img { transform: scale(1.08); }
 
 .sol-card-inner {
   position: relative;
-  padding: 28px 34px 40px;
+  padding: 24px 28px 30px;
   z-index: 2;
 }
 
@@ -970,7 +958,7 @@ body.cursor-hover .cursor-ring {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .sol-card-num {
@@ -1000,12 +988,12 @@ body.cursor-hover .cursor-ring {
 }
 
 .sol-card-desc {
-  font-size: 0.88rem; font-weight: 300;
-  color: var(--graphite); line-height: 1.75;
-  margin-bottom: 24px;
+  font-size: 0.85rem; font-weight: 300;
+  color: var(--graphite); line-height: 1.7;
+  margin-bottom: 18px;
 }
 
-.sol-card-list { margin-bottom: 28px; }
+.sol-card-list { margin-bottom: 20px; }
 
 .sol-card-list li {
   padding: 9px 0 9px 20px;

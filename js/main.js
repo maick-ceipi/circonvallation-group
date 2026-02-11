@@ -208,17 +208,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = contactForm.querySelector('button[type="submit"] span:first-child');
     const originalText = btn.textContent;
     btn.textContent = 'Envoi en cours...';
+    btn.closest('button').disabled = true;
 
-    setTimeout(() => {
-      btn.textContent = 'Message envoyé !';
-      contactForm.querySelector('button[type="submit"]').style.background = 'linear-gradient(135deg, #16a34a, #0d7a32)';
-
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        btn.textContent = 'Message envoyé !';
+        contactForm.querySelector('button[type="submit"]').style.background = 'linear-gradient(135deg, #16a34a, #0d7a32)';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          contactForm.querySelector('button[type="submit"]').style.background = '';
+          btn.closest('button').disabled = false;
+          contactForm.reset();
+        }, 3000);
+      } else {
+        throw new Error('Erreur serveur');
+      }
+    })
+    .catch(() => {
+      btn.textContent = 'Erreur — réessayez';
+      contactForm.querySelector('button[type="submit"]').style.background = 'linear-gradient(135deg, #dc2626, #b91c1c)';
       setTimeout(() => {
         btn.textContent = originalText;
         contactForm.querySelector('button[type="submit"]').style.background = '';
-        contactForm.reset();
+        btn.closest('button').disabled = false;
       }, 3000);
-    }, 1200);
+    });
   });
 
   // ---------- PARALLAX HERO LINES ----------
