@@ -210,13 +210,21 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = 'Envoi en cours...';
     btn.closest('button').disabled = true;
 
+    const formData = new FormData(contactForm);
+    const data = {};
+    formData.forEach((value, key) => { data[key] = value; });
+
     fetch(contactForm.action, {
       method: 'POST',
-      body: new FormData(contactForm),
-      headers: { 'Accept': 'application/json' }
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
     })
-    .then(response => {
-      if (response.ok) {
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
         btn.textContent = 'Message envoyé !';
         contactForm.querySelector('button[type="submit"]').style.background = 'linear-gradient(135deg, #16a34a, #0d7a32)';
         setTimeout(() => {
@@ -226,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
           contactForm.reset();
         }, 3000);
       } else {
-        throw new Error('Erreur serveur');
+        throw new Error(result.message || 'Erreur serveur');
       }
     })
     .catch(() => {
