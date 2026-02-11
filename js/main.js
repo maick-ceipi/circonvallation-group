@@ -201,52 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---------- CONTACT FORM ----------
-  const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = contactForm.querySelector('button[type="submit"] span:first-child');
-    const originalText = btn.textContent;
-    btn.textContent = 'Envoi en cours...';
-    btn.closest('button').disabled = true;
-
-    const formData = new FormData(contactForm);
-    const data = {};
-    formData.forEach((value, key) => { data[key] = value; });
-
-    fetch(contactForm.action, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(result => {
-      if (result.success) {
-        btn.textContent = 'Message envoyé !';
-        contactForm.querySelector('button[type="submit"]').style.background = 'linear-gradient(135deg, #16a34a, #0d7a32)';
-        setTimeout(() => {
-          btn.textContent = originalText;
-          contactForm.querySelector('button[type="submit"]').style.background = '';
-          btn.closest('button').disabled = false;
-          contactForm.reset();
-        }, 3000);
-      } else {
-        throw new Error(result.message || 'Erreur serveur');
-      }
-    })
-    .catch(() => {
-      btn.textContent = 'Erreur — réessayez';
-      contactForm.querySelector('button[type="submit"]').style.background = 'linear-gradient(135deg, #dc2626, #b91c1c)';
-      setTimeout(() => {
-        btn.textContent = originalText;
-        contactForm.querySelector('button[type="submit"]').style.background = '';
-        btn.closest('button').disabled = false;
-      }, 3000);
-    });
-  });
+  // ---------- CONTACT FORM (submitted directly to FormSubmit) ----------
 
   // ---------- PARALLAX HERO LINES ----------
   window.addEventListener('scroll', () => {
